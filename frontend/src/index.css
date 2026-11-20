@@ -1,0 +1,68 @@
+/* Bangla (Bengali) support: self-hosted Noto Sans Bengali, used for any Bangla
+   characters. Latin text is unaffected (the font only covers the Bengali range). */
+@font-face {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/noto-sans-bengali-bengali-400-normal.woff2") format("woff2");
+  /* Only downloaded when a page actually contains Bangla characters. */
+  unicode-range: U+0951-0952, U+0964-0965, U+0980-09FE, U+1CD0, U+1CF7, U+200C-200D, U+20B9, U+25CC;
+}
+
+@font-face {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./assets/fonts/noto-sans-bengali-bengali-600-normal.woff2") format("woff2");
+  /* Only downloaded when a page actually contains Bangla characters. */
+  unicode-range: U+0951-0952, U+0964-0965, U+0980-09FE, U+1CD0, U+1CF7, U+200C-200D, U+20B9, U+25CC;
+}
+
+@font-face {
+  font-family: "Noto Sans Bengali";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./assets/fonts/noto-sans-bengali-bengali-700-normal.woff2") format("woff2");
+  /* Only downloaded when a page actually contains Bangla characters. */
+  unicode-range: U+0951-0952, U+0964-0965, U+0980-09FE, U+1CD0, U+1CF7, U+200C-200D, U+20B9, U+25CC;
+}
+
+:root {
+  --font-body: "Inter", "Noto Sans Bengali", sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  /* Safety net: never let a stray element create sideways scrolling.
+     `clip` (unlike `hidden`) does not break position: sticky. */
+  overflow-x: clip;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+.MuiTypography-root {
+  font-family: var(--font-body) !important;
+  font-weight: 400;
+  letter-spacing: 2px;
+  overflow-wrap: break-word;
+  /* color: #2b2d42; */
+}
+
+/* Wide letter-spacing eats a lot of room on phones */
+@media (max-width: 599.95px) {
+  .MuiTypography-root {
+    letter-spacing: 0.5px;
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "aamf-nextjs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "start": "NODE_ENV=production node server.js",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@emotion/cache": "11.14.0",
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.1",
+    "@mui/icons-material": "7.3.4",
+    "@mui/material": "7.3.4",
+    "next": "16.3.2",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.36.0",
+    "eslint": "9.36.0",
+    "eslint-config-next": "16.0.0",
+    "globals": "16.4.0"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

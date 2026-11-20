@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+
+# Environment variables / secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime files
+*.pid
+*.seed
+*.pid.lock
+
+# User uploads (store/back up separately in production)
+uploads/
+public/uploads/
+
+# Build / cache
+dist/
+build/
+.cache/
+.tmp/
+.temp/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Coverage
+coverage/
+image-backups/
